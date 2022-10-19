@@ -16,15 +16,13 @@ public class CalculateDeposit {
     }
 
     void makeProcess() {
-        int period;
-        int action;
         Scanner userInput = new Scanner(System.in);
         System.out.println("Введите сумму вклада в рублях:");
         int amount = userInput.nextInt();
         System.out.println("Введите срок вклада в годах:");
-        period = userInput.nextInt();
+        int period = userInput.nextInt();
         System.out.println("Выберите тип вклада, 1 - вклад с обычным процентом, 2 - вклад с капитализацией:");
-        action = userInput.nextInt();
+        int action = userInput.nextInt();
         double finalAmount = 0;
         if (action == 1) {
             finalAmount = calculateSimplePercentAmount(amount, 0.06, period);
